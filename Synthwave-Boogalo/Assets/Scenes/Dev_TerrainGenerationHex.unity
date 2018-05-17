@@ -113,6 +113,49 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &226150541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 226150543}
+  - component: {fileID: 226150542}
+  m_Layer: 0
+  m_Name: MapController
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &226150542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 226150541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb7cf539c2d1c5946a910de4dbc7f3c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numHexes: 0
+  maxHexes: 300
+  canAddHexes: 1
+--- !u!4 &226150543
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 226150541}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5966065, y: -5.6190333, z: 6.2549067}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &411456536
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,8 +274,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4236798129455654, guid: 9446705befab83942892444864cc78e5, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114145916832441266, guid: 9446705befab83942892444864cc78e5,
+        type: 2}
+      propertyPath: mapController
+      value: 
+      objectReference: {fileID: 226150542}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9446705befab83942892444864cc78e5, type: 2}
   m_IsPrefabParent: 0
@@ -299,5 +347,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
