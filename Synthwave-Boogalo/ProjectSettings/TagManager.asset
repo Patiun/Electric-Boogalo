@@ -8,6 +8,7 @@ TagManager:
   - Building
   - Bike
   - Trail
+  - Bridge
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Road
   - Trail
   - Bike
-  - 
+  - Bridge
   - 
   - 
   - 

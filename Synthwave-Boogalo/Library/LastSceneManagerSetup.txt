@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Dev_PlayScene.unity
+- path: Assets/Scenes/Dev_BridgeGeneration.unity
   isLoaded: 1
   isActive: 1
