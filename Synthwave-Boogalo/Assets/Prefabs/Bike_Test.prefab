@@ -19,6 +19,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4583819237356724}
+  - component: {fileID: 114637614044744412}
+  - component: {fileID: 65593422211097680}
   m_Layer: 0
   m_Name: Bike
   m_TagString: Untagged
@@ -165,13 +167,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1485331258739518}
-  m_LocalRotation: {x: 0.24524944, y: -0, z: -0, w: 0.96946007}
-  m_LocalPosition: {x: 0, y: 3.5, z: -1.06}
+  m_LocalRotation: {x: 0.15894024, y: -0, z: -0, w: 0.98728824}
+  m_LocalPosition: {x: 0, y: 3.45, z: -0.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4694893976161838}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 28.393002, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 18.291, y: 0, z: 0}
 --- !u!4 &4201477553296092
 Transform:
   m_ObjectHideFlags: 1
@@ -209,8 +211,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1826779342534470}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.11574547, y: 0, z: 0.01}
+  m_LocalScale: {x: 0.0754416, y: 0.0754416, z: 0.0754416}
   m_Children:
   - {fileID: 4175830034136410}
   - {fileID: 4583819237356724}
@@ -246,7 +248,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -443,7 +445,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!65 &65332236041049892
 BoxCollider:
@@ -457,6 +459,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65593422211097680
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1160156116033240}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.8056755, z: 5.515155}
+  m_Center: {x: 0, y: 1.2404244, z: -0.15167141}
 --- !u!65 &65732106536481482
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -476,6 +490,19 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1485331258739518}
   m_Enabled: 1
+--- !u!114 &114637614044744412
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1160156116033240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e32393bc426314846921ce6ff3f32a62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dangerousTags:
+  - Building
 --- !u!114 &114672755700132168
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -488,11 +515,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bike: {fileID: 1160156116033240}
-  accelerationRate: 100
-  decelerationRate: 200
-  topSpeed: 200
-  leanRate: 25
-  turnRate: 0.25
+  accelerationRate: 10
+  decelerationRate: 8
+  topSpeed: 120
+  leanRate: 7.5
+  turnRate: 0.2
   curVelocity: {x: 0, y: 0, z: 0}
 --- !u!124 &124440926606618860
 Behaviour:

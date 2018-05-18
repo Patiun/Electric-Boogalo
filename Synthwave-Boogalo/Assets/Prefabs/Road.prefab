@@ -114,7 +114,7 @@ MonoBehaviour:
   buildingPrefab: {fileID: 1672472706248286, guid: adce171c6f3dfce41959cdeb6d5b9556,
     type: 2}
   buildingOffset: 2
-  buildingChance: 30
+  buildingChance: 22
   hexSize: 4
   neighbors: []
   layerMask:

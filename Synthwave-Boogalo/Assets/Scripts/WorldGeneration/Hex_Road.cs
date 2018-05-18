@@ -37,7 +37,7 @@ public class Hex_Road : MonoBehaviour {
 			//Debug.DrawRay (transform.position, dir * hexSize, Color.red);
 			Physics.Raycast (transform.position, dir, out hit, hexSize, layerMask.value);
 			if (hit.collider != null) {
-				Debug.Log (hit.collider.tag);
+				//Debug.Log (hit.collider.tag);
 				neighbors [i] = hit.collider.gameObject;
 			}
 		}
