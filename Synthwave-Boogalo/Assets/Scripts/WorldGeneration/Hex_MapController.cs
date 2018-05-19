@@ -5,14 +5,14 @@ using UnityEngine;
 /*
  * Author: Greg Kilmer
  * Function: Controls logic for the entire map
- * Last Updated: 5/18/2018
+ * Last Updated: 5/19/2018
  */
 
 public class Hex_MapController : MonoBehaviour {
 
 	public int numIslands = 0;
 	public int maxIslands = 8;
-	public bool canBuildIslands;
+	public bool canBuildIslands = true;
 	public List<GameObject> islands;
 
 	// Use this for initialization

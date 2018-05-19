@@ -5,7 +5,7 @@ using UnityEngine;
 /*
  * Author: Greg Kilmer
  * Function: Controls logic for a game island
- * Last Updated: 5/18/2018
+ * Last Updated: 5/19/2018
  */
 
 public class Unit_Bridge : MonoBehaviour {
@@ -22,6 +22,7 @@ public class Unit_Bridge : MonoBehaviour {
 		bridgePieces = new List<GameObject> ();
 		GameObject firstBridge = Instantiate (bridgePrefab);
 		bridgePrefab.transform.position = transform.position;
+		bridgePrefab.transform.rotation = transform.rotation;
 		startingBridge = firstBridge;
 		startingBridge.GetComponent<Hex_Bridge> ().unit = this;
 		AddBridgePiece (startingBridge);

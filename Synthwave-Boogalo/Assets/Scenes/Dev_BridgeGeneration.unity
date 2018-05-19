@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -141,8 +141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numIslands: 0
-  maxIslands: 8
-  canBuildIslands: 0
+  maxIslands: 4
+  canBuildIslands: 1
   islands: []
 --- !u!4 &224992251
 Transform:
@@ -341,11 +341,6 @@ Prefab:
     - target: {fileID: 4786515534569068, guid: a1883193489ede242920242e1bbe19da, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114582187410225464, guid: a1883193489ede242920242e1bbe19da,
-        type: 2}
-      propertyPath: maxSize
-      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a1883193489ede242920242e1bbe19da, type: 2}

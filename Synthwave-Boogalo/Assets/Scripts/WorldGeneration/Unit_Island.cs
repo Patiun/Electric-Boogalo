@@ -5,7 +5,7 @@ using UnityEngine;
 /*
  * Author: Greg Kilmer
  * Function: Controls logic for a game bridge
- * Last Updated: 5/18/2018
+ * Last Updated: 5/19/2018
  */
 
 public class Unit_Island : MonoBehaviour {
@@ -19,9 +19,12 @@ public class Unit_Island : MonoBehaviour {
 	public float bridgeDensity;
 	public List<GameObject> hexes;
 	public GameObject startingRoad;
+	public Hex_MapController map;
 
 	// Use this for initialization
 	void Start () {
+		map = GameObject.FindGameObjectWithTag ("GameController").GetComponent<Hex_MapController> ();
+		map.AddIsland (this.gameObject);
 		startingRoad.GetComponent<Hex_Road> ().island = this;
 		AddHex (startingRoad);
 	}
@@ -42,5 +45,9 @@ public class Unit_Island : MonoBehaviour {
 				canBuild = false;
 			}
 		}
+	}
+
+	public bool CanBuildBridge() {
+		return map.canBuildIslands;
 	}
 }

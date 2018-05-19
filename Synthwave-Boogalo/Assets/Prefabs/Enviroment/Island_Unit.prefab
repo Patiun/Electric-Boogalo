@@ -140,13 +140,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   biome: 0
-  maxSize: 400
+  maxSize: 500
   currentSize: 0
   canBuild: 1
   buildingDensity: 25
-  bridgeDensity: 5
+  bridgeDensity: 2
   hexes: []
   startingRoad: {fileID: 1802715679136478}
+  map: {fileID: 0}
 --- !u!114 &114805802871346390
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -5,7 +5,7 @@ using UnityEngine;
 /*
  * Author: Greg Kilmer
  * Function: Controls logic for hex tiles for bridges
- * Last Updated: 5/18/2018
+ * Last Updated: 5/19/2018
  */
 
 public class Hex_Bridge : MonoBehaviour {
@@ -52,6 +52,7 @@ public class Hex_Bridge : MonoBehaviour {
 				GameObject newBridge = Instantiate (bridgePrefab);
 				Vector3 newPos = transform.position + transform.forward * hexSize;
 				newBridge.transform.position = newPos;
+				newBridge.transform.rotation = transform.rotation;
 				nextTile = newBridge;
 				newBridge.GetComponent<Hex_Bridge> ().unit = unit;
 				unit.AddBridgePiece (newBridge);
