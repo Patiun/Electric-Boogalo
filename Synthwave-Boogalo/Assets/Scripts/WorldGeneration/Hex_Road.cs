@@ -9,10 +9,11 @@ using UnityEngine;
  */
 
 public class Hex_Road : MonoBehaviour {
-
-	public Hex_MapController mapController;
+	
+	public Unit_Island island;
 	public GameObject roadPrefab;
 	public GameObject buildingPrefab;
+	public GameObject bridgeUnitPrefab;
 	public float buildingOffset = 0.5f;
 	public float buildingChance = 80.00f;
 	public float hexSize = 1.0f;
@@ -21,7 +22,6 @@ public class Hex_Road : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		mapController = GameObject.FindGameObjectWithTag ("GameController").GetComponent<Hex_MapController> ();
 		neighbors = new GameObject[6];
 		for (int n = 0; n < 6; n++) {
 			neighbors [n] = null;
@@ -45,8 +45,9 @@ public class Hex_Road : MonoBehaviour {
 
 
 	private void GenerateMissingNeighbors () {
+		buildingChance = island.buildingDensity;
 		for (int i = 0; i < 6; i++) {
-			if (mapController.canAddHexes) {
+			if (island.canBuild) {
 				if (neighbors [i] == null) {
 					Vector3 dir = Quaternion.AngleAxis (60 * i, transform.up) * transform.forward;
 					if (Random.Range (0, 100) <= buildingChance) {
@@ -55,22 +56,31 @@ public class Hex_Road : MonoBehaviour {
 						newPos.y += buildingOffset;
 						newBuilding.transform.position = newPos;
 						neighbors [i] = newBuilding;
-						mapController.numHexes += 1;
+						island.AddHex (newBuilding);
 					} else {
 						GameObject newRoad = Instantiate (roadPrefab);
 						newRoad.transform.position = transform.position + dir.normalized * hexSize;
 						neighbors [i] = newRoad;
-						mapController.numHexes += 1;
+						newRoad.GetComponent<Hex_Road> ().island = island;
+						island.AddHex (newRoad);
 					}
 				}
 			} else if (neighbors [i] == null) {
-				Vector3 dir = Quaternion.AngleAxis (60 * i, transform.up) * transform.forward;
-				GameObject newBuilding = Instantiate (buildingPrefab);
-				Vector3 newPos = transform.position + dir.normalized * hexSize;
-				newPos.y += buildingOffset;
-				newBuilding.transform.position = newPos;
-				neighbors [i] = newBuilding;
-				mapController.numHexes += 1;
+				if (Random.Range (0.0f, 100.0f) <= island.bridgeDensity) {
+					Vector3 dir = Quaternion.AngleAxis (60 * i, transform.up) * transform.forward;
+					GameObject bridgeUnit = Instantiate (bridgeUnitPrefab);
+					Vector3 newPos = transform.position + dir.normalized * hexSize;
+					bridgeUnit.transform.position = newPos;
+					bridgeUnit.transform.rotation = Quaternion.Euler(new Vector3(0,60*i,0));
+					neighbors [i] = bridgeUnit.GetComponent<Unit_Bridge> ().startingBridge;
+				} else {
+					Vector3 dir = Quaternion.AngleAxis (60 * i, transform.up) * transform.forward;
+					GameObject newBuilding = Instantiate (buildingPrefab);
+					Vector3 newPos = transform.position + dir.normalized * hexSize;
+					newPos.y += buildingOffset;
+					newBuilding.transform.position = newPos;
+					neighbors [i] = newBuilding;
+				}
 			}
 		}
 	}

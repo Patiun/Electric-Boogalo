@@ -13,14 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 11
+    x: 8
     y: 51
     width: 1691
     height: 861
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1691
     height: 861
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -153,8 +153,8 @@ MonoBehaviour:
     y: 0
     width: 847
     height: 412
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 73
+  controlID: 51
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -261,7 +261,7 @@ MonoBehaviour:
   - {fileID: 18}
   - {fileID: 19}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -312,7 +312,7 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
-    x: 11
+    x: 8
     y: 512
     width: 845
     height: 378
@@ -389,20 +389,20 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
-    x: 11
+    x: 8
     y: 100
     width: 845
     height: 391
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 839.5248600493827
+  lastFramingTime: 1056.0658163638195
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.4472184, y: -132.32959, z: 125.39931}
+    m_Target: {x: 1048.527, y: 587.0215, z: 348.77283}
     speed: 2
-    m_Value: {x: 3.4472184, y: -132.32959, z: 125.39931}
+    m_Value: {x: 1048.527, y: 587.0215, z: 348.77283}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -426,13 +426,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.48233792, y: -0.043886654, z: 0.024204325, w: -0.87455034}
+    m_Target: {x: -0.17402668, y: 0.6272199, z: -0.14653954, w: -0.7448732}
     speed: 2
-    m_Value: {x: -0.48233792, y: -0.043886654, z: 0.024204325, w: -0.87455034}
+    m_Value: {x: -0.17402668, y: 0.6272199, z: -0.14653954, w: -0.7448732}
   m_Size:
-    m_Target: 247.39893
+    m_Target: 19.381277
     speed: 2
-    m_Value: 247.39893
+    m_Value: 19.381277
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -495,7 +495,7 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 860
+    x: 857
     y: 100
     width: 351
     height: 345
@@ -504,21 +504,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: f474ffff8afbffff98fbffff00000000
+    m_ExpandedIDs: 98fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: GameController
-      m_OriginalName: GameController
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -64204
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -549,7 +549,7 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 860
+    x: 857
     y: 466
     width: 351
     height: 424
@@ -566,19 +566,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts/WorldGeneration
+    - Assets/Prefabs/Enviroment
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/WorldGeneration
+  - Assets/Prefabs/Enviroment
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Remli\OneDrive\Documents\GitHub\Synthwave-Boogalo\Synthwave-Boogalo
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 682b0000
-    m_LastClickedID: 11112
-    m_ExpandedIDs: 00000000962a00009c2f000000ca9a3bffffff7f
+    m_SelectedIDs: 5a2c0000
+    m_LastClickedID: 11354
+    m_ExpandedIDs: 000000009c2a0000982e0000b02f000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -606,7 +606,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000962a00009c2f0000
+    m_ExpandedIDs: 000000009c2a0000b02f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -633,22 +633,22 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 3a1d00006c220000c0adf4ff64220000102200001e33000022220000fc21000012a2fdff1e220000ae230000b223000014220000f221000006d4ffff0822000024220000000000007a240000182400003c280000ae330000282d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Hex_Bridge
-      m_OriginalName: Hex_Bridge
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 13402
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
@@ -709,7 +709,7 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 860
+    x: 857
     y: 466
     width: 351
     height: 424
@@ -736,7 +736,7 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1215
+    x: 1212
     y: 100
     width: 487
     height: 790

@@ -2,19 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Biome {DEFAULT,TOKYO};
+/*
+ * Author: Greg Kilmer
+ * Function: Controls logic for hex tiles for bridges
+ * Last Updated: 5/18/2018
+ */
 
 public class Hex_Bridge : MonoBehaviour {
 
-	public Biome startingBiome,endingBiome; //Might not use
 	public GameObject previouseTile,nextTile;
-	public GameObject bridgePrefab,roadPrefab,buildingPrefab;
+	public GameObject bridgePrefab,islandPrefab,buildingPrefab;
 	public LayerMask layerMask;
+	public Unit_Bridge unit;
 	public float hexSize;
 
 	//DEBUG
-	public int id;
-	public int maxNum;
 	public float buildingEdgeSize;
 
 	// Use this for initialization
@@ -45,13 +47,14 @@ public class Hex_Bridge : MonoBehaviour {
 	}
 
 	private void GenerateBridge() {
-		if (id < maxNum) { //TODO change to use a bridge unit handler
+		if (unit.canBuild) { //TODO change to use a bridge unit handler
 			if (nextTile == null) {
 				GameObject newBridge = Instantiate (bridgePrefab);
 				Vector3 newPos = transform.position + transform.forward * hexSize;
 				newBridge.transform.position = newPos;
 				nextTile = newBridge;
-				newBridge.GetComponent<Hex_Bridge> ().id = id + 1;
+				newBridge.GetComponent<Hex_Bridge> ().unit = unit;
+				unit.AddBridgePiece (newBridge);
 			}
 		} else {
 			EndBridge ();
@@ -69,9 +72,9 @@ public class Hex_Bridge : MonoBehaviour {
 			newBuilding2.transform.position = newPos;
 		}
 		//Generate Starting Road
-		GameObject newRoad = Instantiate (roadPrefab);
+		GameObject newIsland = Instantiate (islandPrefab);
 		Vector3 newPos2 = transform.position + transform.forward * hexSize;
-		newRoad.transform.position = newPos2;
-		nextTile = newRoad;
+		newIsland.transform.position = newPos2;
+		nextTile = newIsland.GetComponentInChildren<Hex_Road>().gameObject;
 	}
 }
