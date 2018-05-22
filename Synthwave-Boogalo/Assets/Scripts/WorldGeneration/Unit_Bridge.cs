@@ -5,7 +5,7 @@ using UnityEngine;
 /*
  * Author: Greg Kilmer
  * Function: Controls logic for a game island
- * Last Updated: 5/19/2018
+ * Last Updated: 5/22/2018
  */
 
 public class Unit_Bridge : MonoBehaviour {
@@ -38,6 +38,8 @@ public class Unit_Bridge : MonoBehaviour {
 			if (canBuild && currentSize >= maxLength) {
 				canBuild = false;
 			}
+			bridgePiece.name = "Bridge_Piece " + currentSize;
+			bridgePiece.transform.parent = transform;
 		}
 	}
 	

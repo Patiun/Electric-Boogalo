@@ -5,7 +5,7 @@ using UnityEngine;
 /*
  * Author: Greg Kilmer
  * Function: Controls logic for hex tiles for bridges
- * Last Updated: 5/19/2018
+ * Last Updated: 5/21/2018
  */
 
 public class Hex_Bridge : MonoBehaviour {
@@ -71,6 +71,8 @@ public class Hex_Bridge : MonoBehaviour {
 			GameObject newBuilding2 = Instantiate (buildingPrefab);
 			newPos = transform.position + (Quaternion.AngleAxis (-60, transform.up) * (transform.forward * hexSize * (i+1)));
 			newBuilding2.transform.position = newPos;
+			newBuilding.transform.parent = unit.transform;
+			newBuilding2.transform.parent = unit.transform;
 		}
 		//Generate Starting Road
 		GameObject newIsland = Instantiate (islandPrefab);

@@ -5,7 +5,7 @@ using UnityEngine;
 /*
  * Author: Greg Kilmer
  * Function: Controls logic for the entire map
- * Last Updated: 5/19/2018
+ * Last Updated: 5/22/2018
  */
 
 public class Hex_MapController : MonoBehaviour {
@@ -28,7 +28,7 @@ public class Hex_MapController : MonoBehaviour {
 		if (!islands.Contains (island)) {
 			numIslands++;
 			islands.Add (island);
-
+			island.name = "Island " + numIslands + " ("+island.GetComponent<Unit_Island>().biome+")";
 			if (numIslands >= maxIslands) {
 				canBuildIslands = false;
 			}

@@ -54,7 +54,7 @@ MonoBehaviour:
   startingBiome: 0
   endingBiome: 0
   currentSize: 0
-  maxLength: 30
+  maxLength: 40
   canBuild: 1
   bridgePrefab: {fileID: 1745521476827638, guid: a4991cae99781b144bb946a3e6d6204f,
     type: 2}
