@@ -14,10 +14,12 @@ public class Hex_MapController : MonoBehaviour {
 	public int maxIslands = 8;
 	public bool canBuildIslands = true;
 	public List<GameObject> islands;
+	public GameObject islandPrefab;
 
 	// Use this for initialization
 	void Start () {
-		
+		GameObject firstIsland = Instantiate (islandPrefab);
+		AddIsland (firstIsland);
 	}
 	
 	// Update is called once per frame

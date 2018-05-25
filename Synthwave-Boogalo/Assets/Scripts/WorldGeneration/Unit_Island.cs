@@ -87,9 +87,11 @@ public class Unit_Island : MonoBehaviour {
 
 	public void BuildBuildings() {
 		builtBuildings = true;
+		//Temporarily Disabling
+		/*
 		foreach (GameObject hex in hexes) {
 			hex.GetComponent<Hex_Road> ().GenerateMissingNeighbors ();
-		}
+		}*/
 	}
 
 	public bool CanBuildBridge() {

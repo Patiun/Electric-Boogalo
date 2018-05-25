@@ -145,7 +145,7 @@ MonoBehaviour:
   canBuild: 1
   buildingDensity: 25
   bridgeDensity: 2
-  maxBridges: 4
+  maxBridges: 10
   curBridges: 0
   builtBuildings: 0
   buildingCount: 0
@@ -181,6 +181,7 @@ MonoBehaviour:
   buildingOffset: 2
   buildingChance: 22
   hexSize: 4
+  hasBridge: 0
   neighbors: []
   layerMask:
     serializedVersion: 2

@@ -16,6 +16,7 @@ public class Unit_Bridge : MonoBehaviour {
 	public bool canBuild = true;
 	public GameObject bridgePrefab,startingBridge;
 	public List<GameObject> bridgePieces;
+	public GameObject oiginatingHex;
 
 	// Use this for initialization
 	void Start () {

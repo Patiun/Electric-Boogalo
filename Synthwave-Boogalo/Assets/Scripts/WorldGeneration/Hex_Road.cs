@@ -24,6 +24,7 @@ public class Hex_Road : MonoBehaviour {
 	public float buildingOffset = 0.5f;
 	public float buildingChance = 80.00f; //DEPRECATED
 	public float hexSize = 1.0f;
+	public bool hasBridge;
 	public GameObject[] neighbors;
 	public LayerMask layerMask;
 
@@ -125,6 +126,7 @@ public class Hex_Road : MonoBehaviour {
 			}
 			break;
 		}
+		GatherNeighbors ();
 	}
 
 	private void GenerateBuilding(int neighborID) {
@@ -141,14 +143,16 @@ public class Hex_Road : MonoBehaviour {
 	}
 
 	private void GenerateBridge(int neighborID) {
-		if (island.CanBuildBridge()) {
+		if (island.CanBuildBridge() && !hasBridge) {
 			Vector3 dir = Quaternion.AngleAxis (60 * neighborID, transform.up) * transform.forward;
 			GameObject bridgeUnit = Instantiate (bridgeUnitPrefab);
 			Vector3 newPos = transform.position + dir.normalized * hexSize;
 			bridgeUnit.transform.position = newPos;
 			bridgeUnit.transform.rotation = Quaternion.LookRotation (dir);
 			neighbors [neighborID] = bridgeUnit.GetComponent<Unit_Bridge> ().startingBridge;
-			island.AddBridge (bridgeUnit);
+			bridgeUnit.GetComponent<Unit_Bridge> ().oiginatingHex = this.gameObject;
+			//island.AddBridge (bridgeUnit);
+			hasBridge = true;
 		}
 	}
 
