@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 23634883753766978}
   - component: {fileID: 64733172960982938}
   - component: {fileID: 114805802871346390}
+  - component: {fileID: 114532674602999268}
   m_Layer: 9
   m_Name: StartingRoad
   m_TagString: Road
@@ -67,8 +68,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1802715679136478}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 228, y: 200, z: 228}
+  m_LocalPosition: {x: 0, y: 14, z: 0}
+  m_LocalScale: {x: 100, y: 2.769793, z: 100}
   m_Children: []
   m_Father: {fileID: 4786515534569068}
   m_RootOrder: 0
@@ -128,6 +129,19 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 1307097d2b59bcd49bbc4e9021e57cb3, type: 3}
+--- !u!114 &114532674602999268
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1802715679136478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e0ee25c4449774a96c82838d8f20a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  model_a: {fileID: 1809375870333842, guid: e3281f80f939f764fbcc4668fcd3bdb5, type: 2}
+  model_b: {fileID: 1489594892164898, guid: ec410ec2453232245bd2f705b1c0a706, type: 2}
 --- !u!114 &114582187410225464
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,12 +154,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   biome: 0
-  maxSize: 500
+  maxSize: 15
   currentSize: 0
   canBuild: 1
   buildingDensity: 25
   bridgeDensity: 2
-  maxBridges: 10
+  maxBridges: 3
   curBridges: 0
   builtBuildings: 0
   buildingCount: 0
@@ -180,9 +194,10 @@ MonoBehaviour:
     type: 2}
   buildingOffset: 2
   buildingChance: 22
-  hexSize: 4
+  hexSize: 590
   hasBridge: 0
   neighbors: []
   layerMask:
     serializedVersion: 2
     m_Bits: 4864
+  model: {fileID: 0}

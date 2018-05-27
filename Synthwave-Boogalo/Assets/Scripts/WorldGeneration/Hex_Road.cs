@@ -5,7 +5,7 @@ using UnityEngine;
 /*
  * Author: Greg Kilmer
  * Function: Controls logic for generating hex based road units
- * Last Updated: 5/22/2018
+ * Last Updated: 5/27/2018
  */
 
 public class Hex_Road : MonoBehaviour {
@@ -27,6 +27,7 @@ public class Hex_Road : MonoBehaviour {
 	public bool hasBridge;
 	public GameObject[] neighbors;
 	public LayerMask layerMask;
+	public GameObject model;
 
 	// Use this for initialization
 	void Start () {
@@ -58,6 +59,12 @@ public class Hex_Road : MonoBehaviour {
 		neighbors = new GameObject[6];
 		for (int n = 0; n < 6; n++) {
 			neighbors [n] = null;
+		}
+		if (model == null) {
+			model = Instantiate (GetComponent<Model_Hex> ().GetRoadModel (roadType));
+			model.transform.parent = transform;
+			model.transform.position = transform.position;
+			model.transform.rotation = transform.rotation;
 		}
 		GatherNeighbors ();
 		//GenerateMissingNeighbors ();

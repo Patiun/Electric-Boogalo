@@ -52,6 +52,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numIslands: 0
-  maxIslands: 8
+  maxIslands: 5
   canBuildIslands: 1
   islands: []
+  islandPrefab: {fileID: 1325087129366140, guid: a1883193489ede242920242e1bbe19da,
+    type: 2}
