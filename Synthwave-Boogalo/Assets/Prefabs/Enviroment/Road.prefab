@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 23630581414602838}
   - component: {fileID: 64092409497425542}
   - component: {fileID: 114145916832441266}
-  - component: {fileID: 114198417775605550}
   m_Layer: 9
   m_Name: Road
   m_TagString: Road
@@ -38,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1696813493690868}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -590}
-  m_LocalScale: {x: 100, y: 1, z: 100}
+  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalScale: {x: 228, y: 200, z: 228}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -125,23 +124,8 @@ MonoBehaviour:
     type: 2}
   buildingOffset: 2
   buildingChance: 22
-  hexSize: 590
-  hasBridge: 0
+  hexSize: 4
   neighbors: []
   layerMask:
     serializedVersion: 2
     m_Bits: 4864
-  model: {fileID: 0}
---- !u!114 &114198417775605550
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1696813493690868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00e0ee25c4449774a96c82838d8f20a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  model_a: {fileID: 1809375870333842, guid: e3281f80f939f764fbcc4668fcd3bdb5, type: 2}
-  model_b: {fileID: 1489594892164898, guid: ec410ec2453232245bd2f705b1c0a706, type: 2}
